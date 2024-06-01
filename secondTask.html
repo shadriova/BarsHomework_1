@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" type="button" style="background-color: rgb(255, 116, 243); padding: 30px 60px; border: 1px solid rgb(255, 116, 243); color: white; font-size: 30px; border-radius: 5px; display: block; margin: auto;">Кнопка</button>
+    <script>
+        function randomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        document.getElementById('btn').addEventListener('click', function() {
+            let bgColor = randomColor();
+            document.body.style.backgroundColor = bgColor;
+        })
+    </script>
+</body>
+</html>
