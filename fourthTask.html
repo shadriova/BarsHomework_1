@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="input" style="padding: 15px 20px;">
+    <script>
+        const SecretCode = 'bars';
+        let enteredKeys = '';
+
+        document.getElementById('input').addEventListener('keydown', function(event) {
+            enteredKeys = event.target.value;
+            if (enteredKeys === SecretCode) {
+                alert('Вы верно ввели секретный код');
+            }
+        })
+    </script>
+</body>
+</html>
