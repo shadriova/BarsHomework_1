@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: rgb(219, 48, 77);">Пельмени</li>
+        <li style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: rgb(219, 48, 77);">Сосиски</li>
+        <li style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: rgb(219, 48, 77);">Дошик</li>
+    </ul>
+    <script>
+        document.getElementById('list').addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                alert(event.target.textContent);
+            }
+        })
+    </script>
+</body>
+</html>
